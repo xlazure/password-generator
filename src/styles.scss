@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;400;700&display=swap");
+
+//RESET
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+//RESET - END
+$theme-color: rgb(16, 16, 28);
+$main-color: #aaf0d1;
+$main-color-hover: #8ed5b5;
+
+body,
+html {
+  font-family: "Roboto Mono", monospace;
+  background-color: $theme-color;
+  color: #aaaaaa;
+}
+
+#app {
+  max-width: 500px;
+  width: 100%;
+  padding: 0 0.5em;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h3 {
+    padding: 0.5em 0;
+    text-align: center;
+  }
+
+  .wrapper {
+    background-color: #676767;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  .output {
+    position: relative;
+    user-select: none;
+    transition: 0.3s ease;
+    box-shadow: 0px 0px 16px 4px #ffffff00;
+    &:hover {
+      box-shadow: 0px 0px 4px 1px #ffffff78;
+    }
+
+    .copy-button {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      i {
+        transition: 0.2s ease;
+        font-size: 2rem;
+        color: $main-color;
+        &:hover {
+          color: $main-color-hover;
+        }
+      }
+    }
+  }
+
+  .slider-container {
+    margin-bottom: 1em;
+    .slider-text {
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-between;
+      align-items: center;
+      .slider-input-value {
+        color: $main-color;
+        font-size: 2rem;
+      }
+    }
+    .slider-input {
+      input[type="range"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 5px;
+        background: $theme-color;
+        background-image: linear-gradient($main-color, $main-color);
+        background-size: 30% 100%;
+        background-repeat: no-repeat;
+        outline: none;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+
+        &:hover {
+          opacity: 1;
+        }
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          background: #d3d3d3;
+          cursor: pointer;
+        }
+        &::-webkit-slider-runnable-track {
+          -webkit-appearance: none;
+          box-shadow: none;
+          border: none;
+          background: transparent;
+        }
+
+        &::-moz-range-track {
+          -webkit-appearance: none;
+          box-shadow: none;
+          border: none;
+          background: transparent;
+        }
+
+        &::-ms-track {
+          -webkit-appearance: none;
+          box-shadow: none;
+          border: none;
+          background: transparent;
+        }
+      }
+    }
+  }
+  .additional-options {
+  }
+  .password-strength {
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .strength-levels {
+      display: flex;
+      gap: 0.2em;
+      .level {
+        border: 2px solid #cecece;
+        padding: 0.7em 0.35em;
+      }
+    }
+  }
+
+  .generate-button,
+  i {
+    transition: all 0.2s ease;
+  }
+  .generate-button {
+    width: 100%;
+    padding: 1em;
+    background-color: $main-color;
+
+    &:hover {
+      background-color: $main-color-hover;
+      cursor: pointer;
+      i {
+        transform: translateX(5px);
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/3b75f445ef.css"
+      crossorigin="anonymous"
+    />
+
+    <title>Password Generator App</title>
+
+    <script
+      src="https://kit.fontawesome.com/3b75f445ef.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+  </head>
+  <body>
+    <main id="app">
+      <h3>Password Generator</h3>
+
+      <div class="output wrapper" title="copy to clipboard">
+        <span class="output-password">2Gp2g!f1f</span>
+        <button class="copy-button">
+          <i class="fa-regular fa-clipboard"></i>
+        </button>
+      </div>
+
+      <div class="wrapper">
+        <div class="slider-container">
+          <div class="slider-text">
+            <p>Character lenght</p>
+            <p><span class="slider-input-value">6</span></p>
+          </div>
+          <div class="slider-input">
+            <input
+              type="range"
+              name="characterLength"
+              min="1"
+              max="20"
+              value="6"
+            />
+          </div>
+        </div>
+
+        <div class="additional-options">
+          <div>
+            <input
+              type="checkbox"
+              name="includeUppercase"
+              id="includeUpperLetters"
+            />
+            <label for="includeUpperLetters">Include Uppercase Letters</label>
+          </div>
+          <div>
+            <input
+              type="checkbox"
+              name="includeLowercase"
+              id="includeLowerLetters"
+            />
+            <label for="includeLowerLetters">Include Lowecase Letters</label>
+          </div>
+          <div>
+            <input type="checkbox" name="includeNumber" id="includeNumbers" />
+            <label for="includeNumbers">Include Number</label>
+          </div>
+          <div>
+            <input type="checkbox" name="includeSymbol" id="includeSymbols" />
+            <label for="includeSymbols">Include Symbols</label>
+          </div>
+        </div>
+
+        <div class="password-strength">
+          <p>STRENGTH</p>
+          <div class="strength-levels">
+            <div class="level first"></div>
+            <div class="level second"></div>
+            <div class="level third"></div>
+            <div class="level fourth"></div>
+            <div class="level fifth"></div>
+          </div>
+        </div>
+
+        <button class="generate-button">
+          <span>GENERATE</span>
+          <i class="fa-solid fa-arrow-right"> </i>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
